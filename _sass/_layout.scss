@@ -69,6 +69,9 @@ form {
     span {
       background: $font;
     }
+    &:hover span {
+      background: darken($font,10%);
+    }
   }
   .label-viewport-percentage {
     strong {
@@ -76,6 +79,9 @@ form {
     }
     span {
       background: $viewport;
+    }
+    &:hover span {
+      background: darken($viewport,10%);
     }
   }
   .label-absolute {
@@ -85,12 +91,15 @@ form {
     span {
       background: $absolute;
     }
+    &:hover span {
+      background: darken($absolute,10%);
+    }
   }
 
   strong {
     //color: white;
     display: inline-block;
-    padding: 0.25em;
+    padding: 0.25em 0.5em;
     border-radius: 0 0.2em 0.2em 0;
   }
 }
