@@ -11,3 +11,6 @@ markdown: kramdown
 gems:
 - jemoji
 - jekyll-sitemap
+
+sass:
+  style: :compressed
