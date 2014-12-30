@@ -2,106 +2,52 @@
 layout: default
 ---
 
-<section class='sidebar'>
+<section class="sidebar">
   <h1>{{site.title}}</h1>
-  <div class='key'>
+  <div class="key">
     <p>There are 3 types of CSS length:</p>
-    <label class='label-font-relative'>
-      <input ng-model='fontrelative' type='checkbox'>
+    <label class="label-font-relative">
+      <input ng-model="fontrelative" type="checkbox">
       <strong>font relative</strong>
       &mdash; changes on font-size and unit size.
     </label>
-    <label class='label-viewport-percentage'>
-      <input ng-model='viewportpercentage' type='checkbox'>
+    <label class="label-viewport-percentage">
+      <input ng-model="viewportpercentage" type="checkbox">
       <strong>viewport percentage</strong>
       &mdash; changes on viewport size and unit size.
     </label>
-    <label class='label-absolute'>
-      <input ng-model='absolute' type='checkbox'>
+    <label class="label-absolute">
+      <input ng-model="absolute" type="checkbox">
       <strong>absolute</strong>
       &mdash; changes only on unit size.
     </label>
   </div>
   <form>
     <p>Change these values or resize the browser to see how the lengths change. Click on each length to learn more about it.</p>
-    <div class='form-control'>
-      <label for='units'></label>
-      <input id='units' min='1' ng-model='unit' type='number'>
+    <div class="form-control">
+      <label for="units"></label>
+      <input id="units" min="1" ng-model="unit" type="number">
       units
     </div>
-    <div class='form-control'>
-      <label for='bodySize'>body { font-size:</label>
-        <input id='bodySize' min='0' ng-model='bodySize' type='number'>
+    <div class="form-control">
+      <label for="bodySize">body { font-size:</label>
+        <input id="bodySize" min="0" ng-model="bodySize" type="number">
         px; }
       </div>
-      <div class='form-control'>
-        <label for='htmlSize'>html { font-size:</label>
-          <input id='htmlSize' min='0' ng-model='htmlSize' type='number'>
+      <div class="form-control">
+        <label for="htmlSize">html { font-size:</label>
+          <input id="htmlSize" min="0" ng-model="htmlSize" type="number">
           px; }
         </div>
       </form>
-      <p>Content from <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/length'>MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
+      <p>Content from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
     </section>
-    <section class='examples'>
-      <div class='read-more'>[[more]]</div>
-      <input id='example-em' name='unit' ng-model='more' type='radio' value='em - This unit represents the calculated font-size of the element. If used on the font-size property itself, it represents the inherited font-size of the element.'>
-      <label for='example-em' ng-show='fontrelative'>
-        <div class='example example-em type-font-relative' href='#example-em' style='width: [[ unit ]]em; height: [[ unit ]]em' title='[[unit]]em'></div>
+    <section class="examples">
+      <div class="read-more">[[more]]</div>
+      {% for item in site.data.lengths %}
+      <input id="example-{{ item.length }}" name="unit" ng-model="more" type="radio" value="{{ item.length }} - {{ item.description }}">
+      <label for="example-{{ item.length }}" ng-show="{{ item.type | replace: "-","" }}">
+        <div class="example example-{{ item.length }} type-{{ item.type }}" href="#example-{{ item.length }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="[[unit]]{{ item.length }}"></div>
       </label>
-      <input id='example-ex' name='unit' ng-model='more' type='radio' value="ex - This unit represents the x-height of the element's font. On fonts with the 'x' letter, this is generally the height of lowercase letters in the font; 1ex ≈ 0.5em in many fonts.">
-      <label for='example-ex' ng-show='fontrelative'>
-        <div class='example example-ex type-font-relative' href='#example-ex' style='width: [[ unit ]]ex; height: [[ unit ]]ex' title='[[unit]]ex'></div>
-      </label>
-      <input id='example-ch' name='unit' ng-model='more' type='radio' value="ch - This unit represents the width, or more precisely the advance measure, of the glyph '0' (zero, the Unicode character U+0030) in the element's font.">
-      <label for='example-ch' ng-show='fontrelative'>
-        <div class='example example-ch type-font-relative' href='#example-ch' style='width: [[ unit ]]ch; height: [[ unit ]]ch' title='[[unit]]ch'></div>
-      </label>
-      <input id='example-rem' name='unit' ng-model='more' type='radio' value='rem - This unit represents the font-size of the root element (e.g. the font-size of the &lt;html&gt; element). When used on the font-size on this root element, it represents its initial value.'>
-      <label for='example-rem' ng-show='fontrelative'>
-        <div class='example example-rem type-font-relative' href='#example-rem' style='width: [[ unit ]]rem; height: [[ unit ]]rem' title='[[unit]]rem'></div>
-      </label>
-      <input id='example-vh' name='unit' ng-model='more' type='radio' value='vh - 1/100th of the height of the viewport.'>
-      <label for='example-vh' ng-show='viewportpercentage'>
-        <div class='example example-vh type-viewport-percentage' href='#example-vh' style='width: [[ unit ]]vh; height: [[ unit ]]vh' title='[[unit]]vh'></div>
-      </label>
-      <input id='example-vw' name='unit' ng-model='more' type='radio' value='vw - 1/100th of the width of the viewport.'>
-      <label for='example-vw' ng-show='viewportpercentage'>
-        <div class='example example-vw type-viewport-percentage' href='#example-vw' style='width: [[ unit ]]vw; height: [[ unit ]]vw' title='[[unit]]vw'></div>
-      </label>
-      <input id='example-vmin' name='unit' ng-model='more' type='radio' value='vmin - 1/100th of the minimum value between the height and the width of the viewport.'>
-      <label for='example-vmin' ng-show='viewportpercentage'>
-        <div class='example example-vmin type-viewport-percentage' href='#example-vmin' style='width: [[ unit ]]vmin; height: [[ unit ]]vmin' title='[[unit]]vmin'></div>
-      </label>
-      <input id='example-vmax' name='unit' ng-model='more' type='radio' value='vmax - 1/100th of the maximum value between the height and the width of the viewport.'>
-      <label for='example-vmax' ng-show='viewportpercentage'>
-        <div class='example example-vmax type-viewport-percentage' href='#example-vmax' style='width: [[ unit ]]vmax; height: [[ unit ]]vmax' title='[[unit]]vmax'></div>
-      </label>
-      <input id='example-px' name='unit' ng-model='more' type='radio' value='px - Relative to the viewing device.'>
-      <label for='example-px' ng-show='absolute'>
-        <div class='example example-px type-absolute' href='#example-px' style='width: [[ unit ]]px; height: [[ unit ]]px' title='[[unit]]px'></div>
-      </label>
-      <input id='example-mm' name='unit' ng-model='more' type='radio' value='mm - One millimeter.'>
-      <label for='example-mm' ng-show='absolute'>
-        <div class='example example-mm type-absolute' href='#example-mm' style='width: [[ unit ]]mm; height: [[ unit ]]mm' title='[[unit]]mm'></div>
-      </label>
-      <input id='example-cm' name='unit' ng-model='more' type='radio' value='cm - One centimeter (10 millimeters).'>
-      <label for='example-cm' ng-show='absolute'>
-        <div class='example example-cm type-absolute' href='#example-cm' style='width: [[ unit ]]cm; height: [[ unit ]]cm' title='[[unit]]cm'></div>
-      </label>
-      <input id='example-in' name='unit' ng-model='more' type='radio' value='in - One inch (2.54 centimeters).'>
-      <label for='example-in' ng-show='absolute'>
-        <div class='example example-in type-absolute' href='#example-in' style='width: [[ unit ]]in; height: [[ unit ]]in' title='[[unit]]in'></div>
-      </label>
-      <input id='example-pt' name='unit' ng-model='more' type='radio' value='pt - One point (which is 1/72 of an inch).'>
-      <label for='example-pt' ng-show='absolute'>
-        <div class='example example-pt type-absolute' href='#example-pt' style='width: [[ unit ]]pt; height: [[ unit ]]pt' title='[[unit]]pt'></div>
-      </label>
-      <input id='example-pc' name='unit' ng-model='more' type='radio' value='pc - One pica (which is 12 points).'>
-      <label for='example-pc' ng-show='absolute'>
-        <div class='example example-pc type-absolute' href='#example-pc' style='width: [[ unit ]]pc; height: [[ unit ]]pc' title='[[unit]]pc'></div>
-      </label>
-      <input id='example-mozmm' name='unit' ng-model='more' type='radio' value='mozmm - An experimental unit which attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices.'>
-      <label for='example-mozmm' ng-show='absolute'>
-        <div class='example example-mozmm type-absolute' href='#example-mozmm' style='width: [[ unit ]]mozmm; height: [[ unit ]]mozmm' title='[[unit]]mozmm'></div>
-      </label>
+      {% endfor %}
     </section>

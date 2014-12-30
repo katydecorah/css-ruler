@@ -1,0 +1,45 @@
+- length: em
+  type: font-relative
+  description: This unit represents the calculated font-size of the element. If used on the font-size property itself, it represents the inherited font-size of the element.
+- length: ex
+  type: font-relative
+  description: This unit represents the x-height of the element's font. On fonts with the 'x' letter, this is generally the height of lowercase letters in the font; 1ex ≈ 0.5em in many fonts.
+- length: ch
+  type: font-relative
+  description: This unit represents the width, or more precisely the advance measure, of the glyph '0' (zero, the Unicode character U+0030) in the element's font.
+- length: rem
+  type: font-relative
+  description: This unit represents the font-size of the root element (e.g. the font-size of the <html> element). When used on the font-size on this root element, it represents its initial value.
+- length: vh
+  type: viewport-percentage
+  description: 1/100th of the height of the viewport.
+- length: vw
+  type: viewport-percentage
+  description: 1/100th of the width of the viewport.
+- length: vmin
+  type: viewport-percentage
+  description: 1/100th of the minimum value between the height and the width of the viewport.
+- length: vmax
+  type: viewport-percentage
+  description: 1/100th of the maximum value between the height and the width of the viewport.
+- length: px
+  type: absolute
+  description: Relative to the viewing device.
+- length: mm
+  type: absolute
+  description: One millimeter.
+- length: cm
+  type: absolute
+  description: One centimeter (10 millimeters).
+- length: in
+  type: absolute
+  description: One inch (2.54 centimeters).
+- length: pt
+  type: absolute
+  description: One point (which is 1/72 of an inch).
+- length: pc
+  type: absolute
+  description: One pica (which is 12 points).
+- length: mozmm
+  type: absolute
+  description: An experimental unit which attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices.
