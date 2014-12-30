@@ -1,8 +1,0 @@
-{
-  "name": "css-units",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-haml2html": "^0.3.0"
-  }
-}
