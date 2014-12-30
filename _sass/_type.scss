@@ -1,0 +1,20 @@
+h1 {
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+p {
+  margin-bottom: 1.3em;
+}
+
+strong, .unit {
+  font-weight: 700;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: lighten($link-color,10%);
+  }
+}

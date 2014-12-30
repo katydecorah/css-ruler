@@ -4,46 +4,31 @@ layout: default
 
 <section class="sidebar">
   <h1>{{site.title}}</h1>
-  <div class="key">
-    <p>There are 3 types of CSS length:</p>
-    <label class="label-font-relative">
-      <input ng-model="fontrelative" type="checkbox">
-      <strong>font relative</strong>
-      &mdash; changes on font-size and unit size.
-    </label>
-    <label class="label-viewport-percentage">
-      <input ng-model="viewportpercentage" type="checkbox">
-      <strong>viewport percentage</strong>
-      &mdash; changes on viewport size and unit size.
-    </label>
-    <label class="label-absolute">
-      <input ng-model="absolute" type="checkbox">
-      <strong>absolute</strong>
-      &mdash; changes only on unit size.
-    </label>
-  </div>
+  <p>There are 3 types of CSS length:</p>
+  <ul class="key">
+    {% for item in site.data.keys %}<li>
+      <label class="label-{{item.type | replace:' ','-'}}">
+        <input ng-model="{{item.type | replace:' ', ''}}" type="checkbox">
+        <span>&#10003;</span><strong>{{item.type}}</strong></label>
+        &mdash; {{ item.about }}
+    </li>{% endfor %}
+  </ul>
   <form>
     <p>Change these values or resize the browser to see how the lengths change.</p>
     <div class="form-control">
-      <label for="units"></label>
-      <input id="units" min="1" ng-model="unit" type="number">
-      units
+      <label for="units">value of length: <input id="units" min="1" ng-model="unit" type="number"></label>
     </div>
     <div class="form-control">
-      <label for="bodySize">body { font-size:</label>
-        <input id="bodySize" min="0" ng-model="bodySize" type="number">
-        px; }
-      </div>
-      <div class="form-control">
-        <label for="htmlSize">html { font-size:</label>
-          <input id="htmlSize" min="0" ng-model="htmlSize" type="number">
-          px; }
-        </div>
-      </form>
-      <p>Content from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
-    </section>
-    <section class="examples">
-      {% for item in site.data.lengths %}
-        <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="{{ item.length }}, {{item.type}}" data-toggle="popover" ng-show="{{item.type | replace: '-',''}}" length="[[unit]]{{item.length}}" data-content="{{item.description}}"></div>
-      {% endfor %}
-    </section>
+      <label for="bodySize">body { font-size: <input id="bodySize" min="0" ng-model="bodySize" type="number"> px; }</label>
+    </div>
+    <div class="form-control">
+      <label for="htmlSize">html { font-size: <input id="htmlSize" min="0" ng-model="htmlSize" type="number"> px; }</label>
+    </div>
+  </form>
+  <p>Content from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
+</section>
+<section class="examples">
+  {% for item in site.data.lengths %}
+  <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="{{ item.length }}, {{item.type}}" data-toggle="popover" ng-show="{{item.type | replace: '-',''}}" length="[[unit]]{{item.length}}" data-content="{{item.description}}"></div>
+  {% endfor %}
+</section>

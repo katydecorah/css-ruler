@@ -1,0 +1,149 @@
+
+
+.sidebar {
+  background: $body-bg;
+  padding: 10px;
+  font-size: $font-size;
+
+}
+@media(min-width: $break) {
+  .sidebar {
+    max-width: 30vw;
+    float: left;
+    height: 100vh;
+    margin-right: 10px;
+    position: fixed;
+    overflow: scroll;
+  }
+}
+
+
+form {
+  position: relative;
+  border-top: 1px solid rgba(black,0.1);
+  border-bottom: 1px solid rgba(black,0.1);
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  input {
+    font-size: 1em;
+    padding: 0.25em 0.5em;
+    font-family: inherit;
+    max-width: 3.5em;
+    border: none;
+    background: lighten($header-bg,5%);
+    color: white;
+    border-radius: 5px;
+  }
+}
+.form-control {
+  margin-bottom: 10px;
+}
+
+.key {
+  display: block;
+  list-style:none;
+  padding-left: 1.75em;
+  margin-bottom: 1em;
+  li {
+    position: relative;
+    margin-bottom: 1em;
+  }
+  label {
+    position: relative;
+    margin-left: -1.75em;
+    cursor: pointer;
+  }
+  input { display: none; }
+  span {
+    display: inline-block;
+    border-radius: 0.2em 0 0 0.2em;
+    color: rgba(white,0.25);
+    font-weight: 700;
+    padding: 0.25em 0.5em;
+  }
+  input[type=checkbox]:checked + span { color: white;}
+  .label-font-relative {
+    strong {
+      background: rgba($font,0.25);
+    }
+    span {
+      background: $font;
+    }
+  }
+  .label-viewport-percentage {
+    strong {
+      background: rgba($viewport,0.25);
+    }
+    span {
+      background: $viewport;
+    }
+  }
+  .label-absolute {
+    strong {
+      background: rgba($absolute,0.25);
+    }
+    span {
+      background: $absolute;
+    }
+  }
+
+  strong {
+    //color: white;
+    display: inline-block;
+    padding: 0.25em;
+    border-radius: 0 0.2em 0.2em 0;
+  }
+}
+
+
+.examples {
+  padding: 20px;
+
+}
+
+@media(min-width: $break) {
+  .examples {
+    margin-left: 30vw;
+  }
+}
+
+.example {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5em;
+  color: inherit;
+  cursor: help;
+  margin-right: 1em;
+
+  &:after {
+    content: attr(length);
+    position: absolute;
+    font-size: 14px;
+    transform: rotate(90deg) translate(50%, 50%);
+    top: 100%;
+    display: block;
+    left: 50%;
+    line-height: 2;
+  }
+}
+
+
+.type-font-relative, {
+  background: $font;
+  &:hover {
+    background: darken($font, 10%);
+  }
+}
+.type-viewport-percentage {
+  background: $viewport;
+  &:hover {
+    background: darken($viewport, 10%);
+  }
+}
+
+.type-absolute {
+  background: $absolute;
+  &:hover {
+    background: darken($absolute, 10%);
+  }
+}

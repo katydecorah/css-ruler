@@ -1,0 +1,6 @@
+- type: font relative
+  about: changes on font and value size.
+- type: viewport percentage
+  about: changes on viewport and value size.
+- type: absolute
+  about: changes only on value size.
