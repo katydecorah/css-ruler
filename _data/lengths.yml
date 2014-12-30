@@ -42,4 +42,4 @@
   description: One pica (which is 12 points).
 - length: mozmm
   type: absolute
-  description: An experimental unit which attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices.
+  description: An experimental unit which attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices. Currently only supported in Firefox.
