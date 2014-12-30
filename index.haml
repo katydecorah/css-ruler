@@ -1,0 +1,42 @@
+- @units = [['em','font-relative','This unit represents the calculated font-size of the element. If used on the font-size property itself, it represents the inherited font-size of the element.'],['ex','font-relative',"This unit represents the x-height of the element's font. On fonts with the 'x' letter, this is generally the height of lowercase letters in the font; 1ex ≈ 0.5em in many fonts."],['ch','font-relative',"This unit represents the width, or more precisely the advance measure, of the glyph '0' (zero, the Unicode character U+0030) in the element's font."],['rem','font-relative',"This unit represents the font-size of the root element (e.g. the font-size of the <html> element). When used on the font-size on this root element, it represents its initial value."],['vh','viewport-percentage',"1/100th of the height of the viewport."],['vw','viewport-percentage',"1/100th of the width of the viewport."],['vmin','viewport-percentage',"1/100th of the minimum value between the height and the width of the viewport."],['vmax','viewport-percentage',"1/100th of the maximum value between the height and the width of the viewport."],['px','absolute',"Relative to the viewing device."],['mm','absolute',"One millimeter."],['cm','absolute',"One centimeter (10 millimeters)."],['in','absolute',"One inch (2.54 centimeters)."],['pt','absolute',"One point (which is 1/72 of an inch)."],['pc','absolute',"One pica (which is 12 points)."],['mozmm','absolute',"An experimental unit which attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices."]]
+
+
+%section.sidebar
+  %h1 CSS Units
+  .key
+    %p There are 3 types of CSS units:
+    %label.label-font-relative
+      %input{:type=>"checkbox", "ng-model"=>"fontrelative"}
+      %strong font relative
+      &mdash; changes on font-size and unit size.
+    %label.label-viewport-percentage
+      %input{:type=>"checkbox", "ng-model"=>"viewportpercentage"}
+      %strong viewport percentage
+      &mdash; changes on viewport size and unit size.
+    %label.label-absolute
+      %input{:type=>"checkbox", "ng-model"=>"absolute"}
+      %strong absolute
+      &mdash; changes only on unit size.
+  %form
+    %p Change these values or resize the browser to see how the units change.
+    .form-control
+      %label{:for=>"units"}
+      %input#units{"ng-model"=>"unit",:type=>"number",:min=>"1"}
+      units
+    .form-control
+      %label{:for=>"bodySize"} body { font-size:
+      %input#bodySize{"ng-model"=>"bodySize",:type=>"number",:min=>"0"}
+      px; }
+    .form-control
+      %label{:for=>"htmlSize"} html { font-size:
+      %input#htmlSize{"ng-model"=>"htmlSize",:type=>"number",:min=>"0"}
+      px; }
+  %p
+    Content from
+    %a{:href=>"https://developer.mozilla.org/en-US/docs/Web/CSS/length"} MDN
+%section.examples
+  .read-more [[more]]
+  - @units.each do |u|
+    %input{:type=>"radio",:id=>"example-#{u[0]}",:name=>"unit", "ng-model"=>"more", :value=>"#{u[0]} - #{u[2]}"}
+    %label{:for=>"example-#{u[0]}","ng-show"=>"#{u[1].gsub(/-/, "")}"}
+      .example{:class=>"example-#{u[0]} type-#{u[1]}",:href=>"#example-#{u[0]}",:style=>"width: [[ unit ]]#{u[0]}; height: [[ unit ]]#{u[0]}",:title=>"[[unit]]#{u[0]}"}

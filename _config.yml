@@ -1,0 +1,9 @@
+# Site settings
+title: CSS Lengths
+description: 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://katydecorah.com/css-lengths"
+permalink: pretty
+
+# Build settings
+markdown: kramdown
