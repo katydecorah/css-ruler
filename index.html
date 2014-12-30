@@ -5,24 +5,24 @@ layout: default
 <section class="sidebar">
   <h1>{{site.title}}</h1>
   <p>There are 3 types of CSS length:</p>
-  <ul class="key">
-    {% for item in site.data.keys %}<li>
+  <form class="form-keys">
+    {% for item in site.data.keys %}<div class="key">
       <label class="label-{{item.type | replace:' ','-'}}">
         <input ng-model="{{item.type | replace:' ', ''}}" type="checkbox">
         <span>&#10003;</span><strong>{{item.type}}</strong></label>
         &mdash; {{ item.about }}
-    </li>{% endfor %}
-  </ul>
-  <form>
-    <p>Change these values or resize the browser to see how the lengths change.</p>
+    </div>{% endfor %}
+  </form>
+  <form class="form-inputs">
+    <p>Update these values or resize the browser to see how the lengths change.</p>
     <div class="form-control">
-      <label for="units">value of length: <input id="units" min="1" ng-model="unit" type="number"></label>
+      <label for="units">width and height:</label> <input id="units" min="1" ng-model="unit" type="number">
     </div>
     <div class="form-control">
-      <label for="bodySize">body { font-size: <input id="bodySize" min="0" ng-model="bodySize" type="number"> px; }</label>
+      <label for="bodySize">body { font-size:</label> <input id="bodySize" min="0" ng-model="bodySize" type="number"> px; }
     </div>
     <div class="form-control">
-      <label for="htmlSize">html { font-size: <input id="htmlSize" min="0" ng-model="htmlSize" type="number"> px; }</label>
+      <label for="htmlSize">html { font-size:</label> <input id="htmlSize" min="0" ng-model="htmlSize" type="number"> px; }
     </div>
   </form>
   <p>Content from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>

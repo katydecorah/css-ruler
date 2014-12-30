@@ -4,7 +4,7 @@ var myApp = angular.module('cssUnits', [], function ($interpolateProvider) {
 });
 
 myApp.controller('controls', ['$scope', function($scope) {
-  $scope.unit = 2;
+  $scope.unit = 1;
   $scope.bodySize = 16;
   $scope.htmlSize = 16;
   $scope.fontrelative = true;
