@@ -24,11 +24,11 @@ layout: default
       <label for="bodySize">body { font-size:</label> <input id="bodySize" min="0" ng-model="bodySize" type="number"> px; }
     </div>
   </form>
-  <p class="small">Content generously borrowed from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
+  <p class="small">Content borrowed from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>.<br><a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
 </section>
 <section class="examples" style="font-size: [[ bodySize ]]px;">
   <div ng-show="fontrelative == false && viewportpercentage == false && absolute == false" class="whoops">
-    <p><strong>Whoops!</strong> You'll need to select a CSS length type to see it in action.</p>
+    <p><strong>Whoops!</strong> You need to select a length type to see it in action.</p>
     <img src="http://i.imgur.com/7iDT9H9.gif" alt="whoops">
   </div>
   {% for item in site.data.lengths %}
