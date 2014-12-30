@@ -130,6 +130,8 @@
   margin-bottom: 70px;
   margin-right: 20px;
   color: inherit;
+  -webkit-transition: .2s;
+          transition: .2s;
   &:after {
     content: attr(title);
     position: absolute;
