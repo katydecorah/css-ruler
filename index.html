@@ -44,6 +44,6 @@ layout: default
     </section>
     <section class="examples">
       {% for item in site.data.lengths %}
-        <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="{{ item.length }}, {{item.type}}" data-toggle="popover" length="[[unit]]{{item.length}}" data-content="{{item.description}}"></div>
+        <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="{{ item.length }}, {{item.type}}" data-toggle="popover" ng-show="{{item.type | replace: '-',''}}" length="[[unit]]{{item.length}}" data-content="{{item.description}}"></div>
       {% endfor %}
     </section>
