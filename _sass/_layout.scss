@@ -68,10 +68,10 @@
     strong {
       background: rgba($font,0.25);
     }
-    span {
+    .check {
       background: $font;
     }
-    &:hover span {
+    &:hover .check {
       background: darken($font,10%);
     }
   }
@@ -79,10 +79,10 @@
     strong {
       background: rgba($viewport,0.25);
     }
-    span {
+    .check {
       background: $viewport;
     }
-    &:hover span {
+    &:hover .check {
       background: darken($viewport,10%);
     }
   }
@@ -90,10 +90,10 @@
     strong {
       background: rgba($absolute,0.25);
     }
-    span {
+    .check {
       background: $absolute;
     }
-    &:hover span {
+    &:hover .check {
       background: darken($absolute,10%);
     }
   }
