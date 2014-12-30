@@ -1,8 +1,8 @@
 # Site settings
 title: CSS Lengths
-description: 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://katydecorah.com/css-lengths"
+description:
+baseurl: "/css-lengths" # the subpath of your site, e.g. /blog/
+url: "http://katydecorah.com"
 permalink: pretty
 
 # Build settings
