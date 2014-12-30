@@ -24,7 +24,7 @@
   description: 1/100th of the maximum value between the height and the width of the viewport.
 - length: px
   type: absolute
-  description: Relative to the viewing device.
+  description: Relative to the viewing device. For screen display, typically one device pixel (dot) of the display. For printers and very high resolution screens one CSS pixel implies multiple device pixels, so that the number of pixel per inch stays around 96.
 - length: mm
   type: absolute
   description: One millimeter.

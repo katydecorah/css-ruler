@@ -9,8 +9,7 @@ layout: default
     {% for item in site.data.keys %}<div class="key">
       <label class="label-{{item.type | replace:' ','-'}}">
         <input ng-model="{{item.type | replace:' ', ''}}" type="checkbox">
-        <span class="check">&#10003;</span><strong>{{item.type}}</strong></label>
-        &mdash; {{ item.about }}
+        <span class="check">&#10003;</span><strong>{{item.type}}</strong></label> {{ item.about }}
     </div>{% endfor %}
   </form>
   <form class="form-inputs">
