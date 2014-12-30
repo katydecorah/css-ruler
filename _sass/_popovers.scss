@@ -17,25 +17,17 @@
   line-height: 1.42857143;
   text-align: left;
   background-color: $popover-bg;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: $border-radius;
   white-space: normal;
 }
-.popover.top {
-  margin-top: -10px;
-}
-.popover.right {
-  margin-left: 10px;
-}
+
 .popover.bottom {
   margin-top: 10px;
 }
-.popover.left {
-  margin-left: -10px;
-}
+
 .popover-title {
   margin: 0;
   padding: 8px 14px;

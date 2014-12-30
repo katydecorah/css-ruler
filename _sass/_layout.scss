@@ -64,8 +64,10 @@
     padding: 0.25em 0.5em;
   }
   input[type=checkbox]:checked + .check { color: white;}
+  input[type=checkbox]:checked ~ .key-title { font-weight: 700; }
+
   .label-font-relative {
-    strong {
+    .key-title {
       background: rgba($font,0.25);
     }
     .check {
@@ -76,7 +78,7 @@
     }
   }
   .label-viewport-percentage {
-    strong {
+    .key-title {
       background: rgba($viewport,0.25);
     }
     .check {
@@ -87,7 +89,7 @@
     }
   }
   .label-absolute {
-    strong {
+    .key-title {
       background: rgba($absolute,0.25);
     }
     .check {
@@ -98,7 +100,7 @@
     }
   }
 
-  strong {
+  .key-title {
     //color: white;
     display: inline-block;
     padding: 0.25em 0.5em;
