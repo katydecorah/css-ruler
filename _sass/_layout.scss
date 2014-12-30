@@ -107,7 +107,9 @@
 }
 
 
-.examples { padding: 20px; }
+.examples {
+  padding: 20px 20px 200px;
+}
 
 @media(min-width: $break) {
   .examples {
