@@ -106,17 +106,18 @@ form {
     margin-left: 30vw;
   }
 }
-
-.example {
+.example-container {
   display: inline-block;
+  cursor: help;
+
+}
+.example {
   position: relative;
   margin-bottom: 5em;
-  color: inherit;
-  cursor: help;
   margin-right: 1em;
-
+  color: inherit;
   &:after {
-    content: attr(length);
+    content: attr(title);
     position: absolute;
     font-size: 14px;
     transform: rotate(90deg) translate(50%, 50%);

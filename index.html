@@ -29,6 +29,8 @@ layout: default
 </section>
 <section class="examples">
   {% for item in site.data.lengths %}
-  <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="{{ item.length }}, {{item.type}}" data-toggle="popover" ng-show="{{item.type | replace: '-',''}}" length="[[unit]]{{item.length}}" data-content="{{item.description}}"></div>
+  <div class="example-container" ng-show="{{item.type | replace: '-',''}}" data-toggle="popover" data-content="{{item.description}}" title="{{ item.length }}, {{item.type}}">
+    <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="[[unit]]{{item.length}}"></div>
+  </div>
   {% endfor %}
 </section>
