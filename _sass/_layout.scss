@@ -63,8 +63,15 @@
     font-weight: 700;
     padding: 0.25em 0.5em;
   }
+  .key-title {
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border-radius: 0 $border-radius $border-radius 0;
+    color: rgba($font-color,0.75);
+  }
   input[type=checkbox]:checked + .check { color: white;}
-  input[type=checkbox]:checked ~ .key-title { font-weight: 700; }
+  input[type=checkbox]:checked ~ .key-title { color: $font-color; }
 
   .label-font-relative {
     .key-title {
@@ -100,12 +107,7 @@
     }
   }
 
-  .key-title {
-    //color: white;
-    display: inline-block;
-    padding: 0.25em 0.5em;
-    border-radius: 0 $border-radius $border-radius 0;
-  }
+
 }
 
 
