@@ -11,3 +11,10 @@ myApp.controller('controls', ['$scope', function($scope) {
   $scope.viewportpercentage = true;
   $scope.absolute = true;
 }]);
+
+$( document ).ready(function() {
+  $("[data-toggle=popover]").popover({
+    placement : 'bottom',
+    trigger:'hover'
+  });
+});

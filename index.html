@@ -23,7 +23,7 @@ layout: default
     </label>
   </div>
   <form>
-    <p>Change these values or resize the browser to see how the lengths change. Click on each length to learn more about it.</p>
+    <p>Change these values or resize the browser to see how the lengths change.</p>
     <div class="form-control">
       <label for="units"></label>
       <input id="units" min="1" ng-model="unit" type="number">
@@ -43,11 +43,7 @@ layout: default
       <p>Content from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
     </section>
     <section class="examples">
-      <div class="read-more">[[more]]</div>
       {% for item in site.data.lengths %}
-      <input id="example-{{ item.length }}" name="unit" ng-model="more" type="radio" value="{{ item.length }} - {{ item.description }}">
-      <label for="example-{{ item.length }}" ng-show="{{ item.type | replace: "-","" }}">
-        <div class="example example-{{ item.length }} type-{{ item.type }}" href="#example-{{ item.length }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="[[unit]]{{ item.length }}"></div>
-      </label>
+        <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="{{ item.length }}, {{item.type}}" data-toggle="popover" length="[[unit]]{{item.length}}" data-content="{{item.description}}"></div>
       {% endfor %}
     </section>

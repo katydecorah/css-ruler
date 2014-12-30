@@ -136,18 +136,20 @@ form {
 .example {
   display: inline-block;
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 5em;
   color: inherit;
   cursor: help;
+  margin-right: 1em;
 
   &:after {
-    content: attr(title);
+    content: attr(length);
     position: absolute;
     font-size: 14px;
     transform: rotate(90deg) translate(50%, 50%);
     top: 100%;
     display: block;
     left: 50%;
+    line-height: 2;
   }
 }
 
