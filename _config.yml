@@ -1,7 +1,7 @@
 # Site settings
-title: CSS Lengths
+title: CSS Ruler
 description:
-baseurl: "/css-lengths" # the subpath of your site, e.g. /blog/
+baseurl: "/css-ruler" # the subpath of your site, e.g. /blog/
 url: "http://katydecorah.com"
 permalink: pretty
 
