@@ -56,14 +56,14 @@
     cursor: pointer;
   }
   input { display: none; }
-  span {
+  .check {
     display: inline-block;
     border-radius: $border-radius 0 0 $border-radius;
     color: rgba(white,0.25);
     font-weight: 700;
     padding: 0.25em 0.5em;
   }
-  input[type=checkbox]:checked + span { color: white;}
+  input[type=checkbox]:checked + .check { color: white;}
   .label-font-relative {
     strong {
       background: rgba($font,0.25);
