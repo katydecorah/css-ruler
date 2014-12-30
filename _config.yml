@@ -1,6 +1,6 @@
 # Site settings
 title: CSS Ruler
-description: "Explore all the CSS lengths."
+description: "Explore CSS lengths."
 baseurl: "/css-ruler"
 url: "http://katydecorah.com"
 permalink: pretty

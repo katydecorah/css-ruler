@@ -1,4 +1,4 @@
 css-ruler
 ===========
 
-:straight_ruler: Explore all the CSS lengths.
+:straight_ruler: Explore CSS lengths.
