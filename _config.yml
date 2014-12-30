@@ -1,9 +1,13 @@
 # Site settings
 title: CSS Ruler
-description:
-baseurl: "/css-ruler" # the subpath of your site, e.g. /blog/
+description: "Explore all the CSS lengths."
+baseurl: "/css-ruler"
 url: "http://katydecorah.com"
 permalink: pretty
 
 # Build settings
 markdown: kramdown
+
+gems:
+- jemoji
+- jekyll-sitemap
