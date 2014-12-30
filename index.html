@@ -27,7 +27,7 @@ layout: default
   </form>
   <p class="small">Content generously borrowed from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>. <a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
 </section>
-<section class="examples">
+<section class="examples" style="font-size: [[ bodySize ]]px;">
   {% for item in site.data.lengths %}
   <div class="example-container" ng-show="{{item.type | replace: '-',''}}" data-toggle="popover" data-content="{{item.description}}" title="{{ item.length }}, {{item.type}}">
     <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="[[unit]]{{item.length}}"></div>
