@@ -123,12 +123,13 @@
 .example-container {
   display: inline-block;
   cursor: help;
+  margin-right: 25px;
 
 }
 .example {
   position: relative;
   margin-bottom: 70px;
-  margin-right: 20px;
+
   color: inherit;
   -webkit-transition: .1s linear;
           transition: .1s linear;
