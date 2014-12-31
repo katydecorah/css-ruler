@@ -1,6 +1,7 @@
 .sidebar {
   background: $body-bg;
-  padding: 10px;
+  background: rgba(white, 0.55);
+  padding: 1em 1.5em;
   font-size: $font-size;
   @include breakpoint(large) {
     max-width: 30vw;
@@ -61,8 +62,8 @@
     font-family: inherit;
     max-width: 3.5em;
     border: none;
-    background: lighten($header-bg,5%);
-    color: white;
+    border: 1px solid rgba(black,0.05);
+    background: $body-bg;
     border-radius: 5px;
   }
   label {
