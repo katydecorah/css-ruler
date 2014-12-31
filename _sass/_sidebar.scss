@@ -4,6 +4,7 @@
   padding: 1em 1.5em;
   font-size: $font-size;
   @include breakpoint(large) {
+    max-width: 30%;
     max-width: 30vw;
     float: left;
     height: 100vh;

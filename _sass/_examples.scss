@@ -1,6 +1,7 @@
 .examples {
   padding: 20px 20px 200px;
   @include breakpoint(large) {
+    margin-left: 30%;
     margin-left: 30vw;
   }
 }
