@@ -1,0 +1,76 @@
+.sidebar {
+  background: $body-bg;
+  padding: 10px;
+  font-size: $font-size;
+  @include breakpoint(large) {
+    max-width: 30vw;
+    float: left;
+    height: 100vh;
+    margin-right: 10px;
+    position: fixed;
+    overflow: scroll;
+  }
+}
+
+.form-keys {
+  padding-left: 1.75em;
+  margin-bottom: 1.3em;
+  .key {
+    position: relative;
+    margin-bottom: 1em;
+  }
+  label {
+    position: relative;
+    margin-left: -1.75em;
+    cursor: pointer;
+  }
+  input { display: none; }
+  .check {
+    display: inline-block;
+    border-radius: $border-radius 0 0 $border-radius;
+    color: rgba(white,0.25);
+    font-weight: 700;
+    padding: 0.25em 0.5em;
+  }
+  .key-title {
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border-radius: 0 $border-radius $border-radius 0;
+    color: rgba($font-color,0.75);
+  }
+  input[type=checkbox]:checked + .check { color: white;}
+  input[type=checkbox]:checked ~ .key-title { color: $font-color; }
+  @each $type, $i in $types {
+    .label-#{$type} {
+      .key-title { background: rgba($i,0.25); }
+      .check { background: $i; }
+      &:hover .check { background: darken($i,10%);}
+    }
+  }
+}
+
+
+
+.form-inputs {
+  position: relative;
+  margin-bottom: 1.3em;
+  input {
+    font-size: 1em;
+    padding: 0.25em 0.5em;
+    font-family: inherit;
+    max-width: 3.5em;
+    border: none;
+    background: lighten($header-bg,5%);
+    color: white;
+    border-radius: 5px;
+  }
+  label {
+    min-width: 10.5em;
+    display: inline-block;
+  }
+  .form-control {
+    padding: 0 1em 10px;
+    font-family: 'Source Code Pro', monospace;
+  }
+}

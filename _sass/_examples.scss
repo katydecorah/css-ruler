@@ -1,0 +1,40 @@
+.examples {
+  padding: 20px 20px 200px;
+  @include breakpoint(large) {
+    margin-left: 30vw;
+  }
+}
+
+.example-container {
+  display: inline-block;
+  cursor: help;
+  margin-right: 25px;
+
+}
+.example {
+  position: relative;
+  margin-bottom: 70px;
+
+  color: inherit;
+  -webkit-transition: .1s linear;
+          transition: .1s linear;
+  &:after {
+    content: attr(title);
+    position: absolute;
+    font-size: 14px;
+    transform: rotate(90deg) translate(50%, 50%);
+    top: 100%;
+    display: block;
+    left: 50%;
+    line-height: 2;
+  }
+}
+
+@each $type, $i in $types {
+  .type-#{$type} {
+    background: $i;
+    &:hover {
+      background: darken($i, 10%);
+    }
+  }
+}
