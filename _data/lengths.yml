@@ -12,16 +12,16 @@
   description: This unit represents the font-size of the root element (e.g. the font-size of the <html> element). When used on the font-size on this root element, it represents its initial value.
 - length: vh
   type: viewport-percentage
-  description: 1/100th of the height of the viewport.
+  description: 1% of viewport’s height.
 - length: vw
   type: viewport-percentage
-  description: 1/100th of the width of the viewport.
+  description: 1% of viewport’s width.
 - length: vmin
   type: viewport-percentage
-  description: 1/100th of the minimum value between the height and the width of the viewport.
+  description: 1% of viewport’s smaller dimension.
 - length: vmax
   type: viewport-percentage
-  description: 1/100th of the maximum value between the height and the width of the viewport.
+  description: 1% of viewport’s larger dimension.
 - length: px
   type: absolute
   description: Relative to the viewing device. For screen display, typically one device pixel (dot) of the display. For printers and very high resolution screens one CSS pixel implies multiple device pixels, so that the number of pixel per inch stays around 96.
