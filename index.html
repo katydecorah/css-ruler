@@ -15,13 +15,13 @@ layout: default
     <form class="form-inputs">
       <p>Update the following values or resize the browser to see how the lengths change:</p>
       <div class="form-control">
-        <label for="units">width/height:</label> <input id="units" min="1" ng-model="unit" type="number">;
-      </div>
-      <div class="form-control">
         <label for="htmlSize">html { font-size:</label> <input id="htmlSize" min="0" ng-model="htmlSize" type="number"> px; }
       </div>
       <div class="form-control">
         <label for="bodySize">body { font-size:</label> <input id="bodySize" min="0" ng-model="bodySize" type="number"> px; }
+      </div>
+      <div class="form-control">
+        <label for="units">.example { width:</label> <input id="units" min="1" ng-model="unit" type="number">; }
       </div>
     </form>
     <p class="small">Content borrowed from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">MDN</a>.<br><a href="https://github.com/katydecorah/css-ruler">Made with</a> :heart: by <a href="http://katydecorah.com/">Katy DeCorah</a>.</p>
