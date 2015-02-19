@@ -57,6 +57,9 @@
 .form-inputs {
   position: relative;
   margin-bottom: 1.3em;
+  background: #fff;
+  padding: 1em;
+  border-radius: .25em;
   input {
     font-size: 1em;
     padding: 0.25em 0.5em;
@@ -72,7 +75,7 @@
     display: inline-block;
   }
   .form-control {
-    padding: 0 1em 10px;
+    padding-bottom: 10px;
     font-family: 'Source Code Pro', monospace;
   }
 }
