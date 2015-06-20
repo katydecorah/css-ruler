@@ -1,6 +1,0 @@
-- type: font relative
-  about: is relative to font-size.
-- type: viewport percentage
-  about: is relative to viewport size.
-- type: absolute
-  about: is a physical measurement.

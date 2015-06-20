@@ -1,12 +1,71 @@
 ---
 layout: default
+
+types:
+- type: font relative
+  about: is relative to font-size.
+- type: viewport percentage
+  about: is relative to viewport size.
+- type: absolute
+  about: is a physical measurement.
+
+lengths:
+- length: em
+  type: font-relative
+  description: This unit represents the calculated font-size of the element. If used on the font-size property itself, it represents the inherited font-size of the element.
+- length: ex
+  type: font-relative
+  description: This unit represents the x-height of the element's font. On fonts with the 'x' letter, this is generally the height of lowercase letters in the font; 1ex ≈ 0.5em in many fonts.
+- length: ch
+  type: font-relative
+  description: This unit represents the width, or more precisely the advance measure, of the glyph '0' (zero, the Unicode character U+0030) in the element's font.
+- length: rem
+  type: font-relative
+  description: This unit represents the font-size of the root element (e.g. the font-size of the <html> element). When used on the font-size on this root element, it represents its initial value.
+- length: vh
+  type: viewport-percentage
+  description: 1% of viewport’s height.
+- length: vw
+  type: viewport-percentage
+  description: 1% of viewport’s width.
+- length: vmin
+  type: viewport-percentage
+  description: 1% of viewport’s smaller dimension.
+- length: vmax
+  type: viewport-percentage
+  description: 1% of viewport’s larger dimension.
+- length: px
+  type: absolute
+  description: Relative to the viewing device. For screen display, typically one device pixel (dot) of the display. For printers and very high resolution screens one CSS pixel implies multiple device pixels, so that the number of pixel per inch stays around 96.
+- length: mm
+  type: absolute
+  description: One millimeter.
+- length: cm
+  type: absolute
+  description: One centimeter (10 millimeters).
+- length: in
+  type: absolute
+  description: One inch (2.54 centimeters).
+- length: pt
+  type: absolute
+  description: One point (which is 1/72 of an inch).
+- length: pc
+  type: absolute
+  description: One pica (which is 12 points).
+- length: q
+  type: absolute
+  description: One quarter-millimeters ( which is 1/40th of a cm).
+- length: mozmm
+  type: absolute
+  description: An experimental unit which attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices. Currently only supported in Firefox.
+
 ---
 
   <section class="sidebar">
     <h1>{{site.title}}</h1>
     <p>There are 3 types of CSS lengths:</p>
     <form class="form-keys">
-      {% for item in site.data.keys %}<div class="key">
+      {% for item in page.types %}<div class="key">
         <label class="label-{{item.type | replace:' ','-'}}">
           <input ng-model="{{item.type | replace:' ', ''}}" type="checkbox">
           <span class="check">&#10003;</span><span class="key-title">{{item.type}}</span></label> {{ item.about }}
@@ -31,7 +90,7 @@ layout: default
       <p><strong>Whoops!</strong> You need to select a length type to see it in action.</p>
       <img src="http://i.imgur.com/7iDT9H9.gif" alt="whoops">
     </div>
-    {% for item in site.data.lengths %}
+    {% for item in page.lengths %}
     <div class="example-container" ng-show="{{item.type | replace: '-',''}}" data-toggle="popover" data-content="{{item.description}}" title="{{ item.length }}, {{item.type}}">
       <div class="example example-{{ item.length }} type-{{ item.type }}" style="width: [[ unit ]]{{ item.length }}; height: [[ unit ]]{{ item.length }}" title="[[unit]]{{item.length}}"></div>
     </div>
