@@ -2,7 +2,7 @@
 title: CSS Ruler
 description: "Explore CSS lengths."
 baseurl: "/css-ruler"
-url: "http://katydecorah.com"
+url: "https://katydecorah.com"
 permalink: pretty
 
 # Build settings
@@ -10,12 +10,12 @@ markdown: kramdown
 port: 4000
 host: 127.0.0.1
 
-gems:
+plugin:
 - jemoji
 - jekyll-sitemap
 
 sass:
   style: :compressed
 
-jquery: 1.11.2
-angularjs: 1.4.1
+jquery: 3.3.1
+angularjs: 1.6.5

@@ -14,7 +14,7 @@ myApp.controller('controls', ['$scope', function($scope) {
 
 $( document ).ready(function() {
   $("[data-toggle=popover]").popover({
-    placement : 'bottom',
+    placement: 'bottom',
     trigger: 'hover'
   });
 });

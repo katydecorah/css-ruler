@@ -1,6 +1,2 @@
 _site
 .sass-cache
-*.lock
-node_modules
-package.json
-Gruntfile.js
