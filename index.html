@@ -28,7 +28,6 @@ layout: default
   <section class="examples" style="font-size: [[ bodySize ]]px;">
     <div ng-show="fontrelative == false && viewportpercentage == false && absolute == false" class="whoops">
       <p><strong>Whoops!</strong> You need to select a length type to see it in action.</p>
-      <img src="https://i.imgur.com/7iDT9H9.gif" alt="whoops">
     </div>
     {% for item in site.data.lengths.lengths %}
     <div class="example-container" ng-show="{{item.type | replace: '-',''}}" data-toggle="popover" data-content="{{item.description}}" title="{{ item.length }}, {{item.type}}">
