@@ -12,5 +12,5 @@ css-ruler
 ### Resources
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/length
-* http://dev.w3.org/csswg/css-values/#lengths
-* http://css-tricks.com/the-lengths-of-css/
+* https://dev.w3.org/csswg/css-values/#lengths
+* https://css-tricks.com/the-lengths-of-css/
