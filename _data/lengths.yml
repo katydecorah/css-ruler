@@ -73,6 +73,3 @@ lengths:
 - length: Q
   type: absolute
   description: (Experimental) One quarter of a millimeter. 1Q = 1/40th of 1cm.
-- length: mozmm
-  type: absolute
-  description: (Experimental) Attempts to render at exactly one millimeter regardless of the size or resolution of the display. This is rarely actually what you want, but may be useful in particular for mobile devices
