@@ -25,10 +25,10 @@ lengths:
 - length: ic
   type: font-relative
   description: (Experimental) Equal to the used advance measure of the 水 (CJK water ideograph, U+6C34) glyph found in the font used to render it.
-- length: 1h
+- length: lh
   type: font-relative
   description: (Experimental) Equal to the computed value of the line-height property of the element on which it is used, converted to an absolute length.
-- length: r1h
+- length: rlh
   type: font-relative
   description: (Experimental) Equal to the computed value of the line-height property on the root element (typically <html>), converted to an absolute length. When used on the font-size or line-height properties of the root element, it refers to the properties' initial value.
 
