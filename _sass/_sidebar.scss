@@ -26,11 +26,13 @@
     margin-left: -1.75em;
     cursor: pointer;
   }
-  input { display: none; }
+  input {
+    display: none;
+  }
   .check {
     display: inline-block;
     border-radius: $border-radius 0 0 $border-radius;
-    color: rgba(white,0.25);
+    color: rgba(white, 0.25);
     font-weight: 700;
     padding: 0.25em 0.5em;
   }
@@ -39,34 +41,42 @@
     display: inline-block;
     padding: 0.25em 0.5em;
     border-radius: 0 $border-radius $border-radius 0;
-    color: rgba($font-color,0.75);
+    color: rgba($font-color, 0.75);
   }
-  input[type=checkbox]:checked + .check { color: white;}
-  input[type=checkbox]:checked ~ .key-title { color: $font-color; }
+  input[type="checkbox"]:checked + .check {
+    color: white;
+  }
+  input[type="checkbox"]:checked ~ .key-title {
+    color: $font-color;
+  }
   @each $type, $i in $types {
     .label-#{$type} {
-      .key-title { background: rgba($i,0.25); }
-      .check { background: $i; }
-      &:hover .check { background: darken($i,10%);}
+      .key-title {
+        background: rgba($i, 0.25);
+      }
+      .check {
+        background: $i;
+      }
+      &:hover .check {
+        background: darken($i, 10%);
+      }
     }
   }
 }
-
-
 
 .form-inputs {
   position: relative;
   margin-bottom: 1.3em;
   background: #fff;
   padding: 1em;
-  border-radius: .25em;
+  border-radius: 0.25em;
   input {
     font-size: 1em;
     padding: 0.25em 0.5em;
     font-family: inherit;
     max-width: 3.5em;
     border: none;
-    border: 1px solid rgba(black,0.05);
+    border: 1px solid rgba(black, 0.05);
     background: $body-bg;
     border-radius: 5px;
   }
@@ -76,6 +86,6 @@
   }
   .form-control {
     padding-bottom: 10px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
   }
 }

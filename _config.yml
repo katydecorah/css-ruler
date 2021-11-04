@@ -11,8 +11,8 @@ port: 4000
 host: 127.0.0.1
 
 plugin:
-- jemoji
-- jekyll-sitemap
+  - jemoji
+  - jekyll-sitemap
 
 sass:
   style: :compressed

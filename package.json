@@ -1,0 +1,27 @@
+{
+  "name": "css-ruler",
+  "version": "1.0.0",
+  "description": "css-ruler",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katydecorah/css-ruler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katydecorah/css-ruler/issues"
+  },
+  "homepage": "https://github.com/katydecorah/css-ruler#readme",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.0",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1"
+  }
+}

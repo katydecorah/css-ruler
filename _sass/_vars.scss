@@ -1,13 +1,11 @@
-
 $header-bg: #2c3e50;
 $body-bg: #ecf0f1;
 
-$font:  #11866f;
+$font: #11866f;
 $viewport: #d24436;
-$absolute:  #8e44ad;
+$absolute: #8e44ad;
 
-$link-color: darken(#2980b9,5%);
-
+$link-color: darken(#2980b9, 5%);
 
 $font-size: 13px;
 $font-color: #2c3e50;
@@ -17,11 +15,16 @@ $border-radius: 0.2em;
 $popover-bg: #ffffff;
 $popover-title-bg: #f7f7f7;
 
-$types: ("absolute": $absolute, "font-relative": $font, "viewport-percentage": $viewport);
-
+$types: (
+  "absolute": $absolute,
+  "font-relative": $font,
+  "viewport-percentage": $viewport,
+);
 
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (min-width: 675px) { @content; }
+    @media (min-width: 675px) {
+      @content;
+    }
   }
 }
