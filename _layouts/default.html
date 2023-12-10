@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   ng-app="cssUnits"
   ng-controller="controls"
-  style="font-size: [[ htmlSize ]]px"
+  style="font-size: [[ htmlSize]]px"
 >
   <head>
     <meta charset="utf-8" />
@@ -16,7 +16,10 @@
     <meta name="twitter:title" content="{{site.title}}" />
     <meta name="twitter:description" content="{{site.description}}" />
     <meta name="twitter:url" content="{{site.url}}{{site.baseurl}}/" />
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link
+      rel="stylesheet"
+      href="{{ '/css/main.css' | prepend: site.baseurl }}"
+    />
     <link
       rel="canonical"
       href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
@@ -28,7 +31,7 @@
     />
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/{{site.angularjs}}/angular.min.js"></script>
   </head>
-  <body style="font-size: [[ bodySize ]]px" ng-cloak>
+  <body style="font-size: [[ bodySize]]px" ng-cloak>
     {{ content }}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/{{site.jquery}}/jquery.min.js"></script>
     <script src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
@@ -51,7 +54,7 @@
         document,
         "script",
         "//www.google-analytics.com/analytics.js",
-        "ga"
+        "ga",
       );
       ga("create", "UA-34842039-2", "auto");
       ga("send", "pageview");

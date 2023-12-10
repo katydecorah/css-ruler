@@ -4,8 +4,7 @@
   "description": "css-ruler",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
-    "prepare": "husky install"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -18,10 +17,8 @@
   },
   "homepage": "https://github.com/katydecorah/css-ruler#readme",
   "devDependencies": {
-    "eslint": "^8.25.0",
-    "eslint-config-prettier": "^8.5.0",
-    "husky": "^8.0.1",
-    "prettier": "^2.7.1",
-    "pretty-quick": "^3.1.3"
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1"
   }
 }
